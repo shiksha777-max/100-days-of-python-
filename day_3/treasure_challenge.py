@@ -1,1 +1,49 @@
+#Treasure island game
+print('''
+*******************************************************************************
+          |                   |                  |                     |
+ _________|________________.=""_;=.______________|_____________________|_______
+|                   |  ,-"_,=""     `"=.|                  |
+|___________________|__"=._o`"-._        `"=.______________|___________________
+          |                `"=._o`"=._      _`"=._     |          |
+ _________|_____________________:=._o "=._."_.-"'"=.__________________|_______
+|                   |    __.--" , ; `"=._o." ,-"""-._ ".                    |
+|___________________|_._"  ,. .` ` `` ,  `"-._"-o." ,-"""-._ ".__________________|___________________
+          |           |o`"=._` , "` `; .". ,  "-._"-._; ;              |
+ _________|___________| ;`-.o`"=._; ." ` '`."\` . "-._ /_______________|_______
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+_______________________________________________________________________________
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+          |___________________________|o;    `"-.o`"=._``  '` " ,__.--o;   |
+ _________|____________________| ;     (#) `-.o `"=`_.--"_o.-; ;___|___________________
+|                   | |o;    `"-.o`"=._``  '` " ,__.--o;   |
+|___________________|_| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+          |___________________________|o;    `"-.o`"=._``  '` " ,__.--o;   |
+ _________|____________________| ;     (#) `-.o `"=.`_.--"_o.-; ;___|___________________
+*******************************************************************************
+''')
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.")
+direction = input("You're at a cross road. Where do you want to go? Type 'left' or 'right' ")
+if direction == "left":
+    action = input("You come to a lake. There is an island in the middle of the lake. Type 'wait' to wait for a boat. Type 'swim' to swim across. ")
+    if action == "wait":
+        door = input("You arrive at the island unharmed. There is a house with 3 doors. One red, one yellow and one blue. Which colour do you choose? ")
+        if door == "red":
+            print("It's a room full of fire. Game Over.")
+        elif door == "yellow":
+            print("You found the treasure! You Win!")
+        elif door == "blue":
+            print("You enter a room of beasts. Game Over.")
+        else:
+            print("You chose a door that doesn't exist. Game Over.")
+    else:
+        print("You get attacked by an angry trout. Game Over.")
+else:
+    print("You fell into a hole. Game Over.")   
 
+
+
+            
