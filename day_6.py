@@ -84,5 +84,26 @@ def jump():
             jump()
         else:
             move()
+#escaping the maze
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
 
+def escape_maze():
+    while not at_goal():
+        if wall_in_front():
+            turn_left()
+        else:
+            move()
+while not at_goal():
+    if right_is_clear():
+        turn_right()
+        move()
+    elif wall_in_front():
+        turn_left()
+    else:
+        move()      
+
+        
 
